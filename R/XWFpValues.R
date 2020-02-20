@@ -109,7 +109,7 @@ XWFpValues <- function(GAMobject, xx, t, n.i, psi.list = NULL, F, z = NULL, w = 
         return(NA)
       }
     )
-    if(!is.na(temp)) {
+    if(!is.na(temp[1])) {
       temp <- c(summary(temp)$p.pv, summary(temp)$s.pv)
       if(n.p == length(temp)) pValMat[s, ] <- temp # This check on 'temp' is here to ensure 'xwfGridsearch did not accidentially return NA
     }
